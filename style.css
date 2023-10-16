@@ -1,0 +1,221 @@
+* {
+	box-sizing: border-box;
+}
+
+@media (max-width: 50px) {
+	nav, table,.container, .container1,.container2 {
+	  width: 100%;
+	  height: auto;
+	}
+}
+
+body {
+	background-color: black;
+	color: rgb(255, 255, 255);
+	font-size : 14px;
+	font-family: 'Didot'; 
+	font-weight: normal;
+	text-align: center;
+}
+
+
+
+header{
+	background-color: white;
+	font-weight:bold;
+	letter-spacing: 5px;
+	padding: 10px;
+}
+
+header::after {
+	content: '' ;
+	display:table;
+	clear: both;
+}
+
+nav {
+	float:none;
+}
+
+nav ul {
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding-top: 5px;
+}
+
+nav a {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+nav a:hover {
+	color:rgb(221, 86, 86);
+}
+
+
+
+/* this Container is for Heading */
+.container {
+	width:auto;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+
+/* container1 is for "The" on the Home Page */
+.container1 {
+	position:absolute;
+	top: 30%;
+	left: 25%;
+}
+
+/* container1 is for "Beatles" on the Home Page */
+.container2{
+	position:absolute;
+	top: 40%;
+	left: 38%;
+}
+
+.container3{
+	float: left;
+	width: 35%;
+	height: 900px;
+	margin-left: 2%;
+	background: rgba(148, 117, 117, 0.815);
+	padding: 20px;
+}
+
+.container4{
+	float: right;
+	width: 60%;
+	height: 900px;
+	margin-right: 2%;
+	background: rgb(63, 68, 65);
+	padding: 50px;
+}
+
+
+/* This creates a Table for the CV page to show */
+table{
+	font-family: 'Didot';
+	width: 100%;
+	margin-top: 10px;
+	padding: 2%;
+	border-collapse: separate;
+	background-color: rgb(0, 0, 0);
+}
+
+/* Table Header*/
+th {
+	text-align: center;
+	padding: 8px;
+	color:rgb(221, 86, 86);
+	background-color: rgb(255, 255, 255);
+}
+
+/* Table elements style */
+td {
+	text-align: center;
+	padding: 8px;
+	color:rgb(255, 255, 255);
+	background-color: rgb(99, 98, 98);
+}
+
+
+h1 {
+	font-size: 100px;
+	color: white;
+	text-align: center;	
+	font-family: 'Didot';
+	letter-spacing: 40px;
+	margin-top: 30px;
+	margin-bottom: 90px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+h2 {
+	font-size: 70px;
+	color:rgb(255, 255, 255);
+	letter-spacing: 5px;
+	text-align: left;
+	font-family: 'Didot', serif;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+h3 {
+	font-size: 25px;
+	color:rgb(0, 0, 0);
+	letter-spacing: 5px;
+	text-align: center;
+	font-family: 'Didot';
+	margin-left: 100px;
+	margin-right:100px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+p {
+	font-size: 16px;
+	color: rgb(255, 255, 255);
+	font-family: 'Didot';
+	text-align: center;
+	line-height: 20px;
+}
+
+.container3 ul{
+	margin:0;
+	padding:0;
+	list-style: square;
+	line-height: 25px;
+	list-style-position: inside;
+}
+
+footer{
+	font-weight:bold;
+	letter-spacing: 5px;
+	font-family: 'Didot';
+	text-align: center;
+	text-decoration: none;
+}
+
+footer::after {
+	content: '' ;
+	display:table;
+	clear: both;
+}
+
+
+footer ul {
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+
+footer li {
+	display: inline-block;
+	padding-bottom: 5px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+footer a {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+footer a:hover {
+	color:rgb(221, 86, 86);
+}
