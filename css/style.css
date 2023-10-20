@@ -1,14 +1,22 @@
+/* all ideas are mine except the navbar idea is taken from "How to create an awesome navigation bar with HTML & CSS - by Kevin Powell https://www.youtube.com/watch?v=FEmysQARWFU */
+/* I also used w3schools to know how to write codes but I modified them heavily */
 * {
 	box-sizing: border-box;
 }
 
-@media (max-width: 50px) {
-	nav, table,.container, .container1,.container2 {
-	  width: 100%;
+
+/* Responsive Websie Begin */
+@media only screen and (max-width: 100px) {
+	nav, table,.navbar, .container1,.container2, .container3, h1, h2, h3, p, img, .citation {
+	  width: 100px;
 	  height: auto;
+	  padding: 0;
 	}
 }
+/* Responsive Websie End */
 
+
+/* Body Style Begin */
 body {
 	background-color: black;
 	color: rgb(255, 255, 255);
@@ -16,17 +24,32 @@ body {
 	font-family: 'Didot'; 
 	font-weight: normal;
 	text-align: center;
+	overflow:auto;
 }
+/* Responsive Websie End */
 
 
+/* Heading Container and navbar Begin */
+/* this Container is for the Heading */
+.navbar {
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px 0;
+	max-width: 100%;
+	text-align: center;
+}
 
 header{
 	background-color: white;
 	font-weight:bold;
 	letter-spacing: 5px;
-	padding: 10px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-bottom: 25px;
+	max-width: 100%;
 }
 
+/* header::after clears the child element, I took this code from the following youtube video: https://www.youtube.com/watch?v=FEmysQARWFU */
 header::after {
 	content: '' ;
 	display:table;
@@ -34,13 +57,15 @@ header::after {
 }
 
 nav {
-	float:none;
+	float: none;
 }
 
+/* ul and li are for lists. However, I used it in the navbar to have it organized. The idea is also from the previous youtube video */ 
 nav ul {
 	margin:0;
 	padding:0;
 	list-style: none;
+	display: contents;
 }
 
 nav li {
@@ -60,50 +85,83 @@ nav a {
 nav a:hover {
 	color:rgb(221, 86, 86);
 }
+/* Heading Container and navbar END */
 
 
 
-/* this Container is for Heading */
-.container {
-	width:auto;
-	margin: 0 auto;
-	padding: 10px 0;
-}
 
 /* container1 is for "The" on the Home Page */
 .container1 {
-	position:absolute;
-	top: 30%;
-	left: 25%;
+	overflow: auto;
+	float: center;
+	height: 50%;
+	width: 75%;
+	margin-top: 10%;
+	padding-right: 10%;
+	width: 100%;
+	margin-right: 50px;
 }
 
 /* container1 is for "Beatles" on the Home Page */
 .container2{
-	position:absolute;
-	top: 40%;
-	left: 38%;
+	overflow: auto;
+	float: center;
+	height: 90%;
+	padding-left:20%;
+	padding-bottom: 40%;
+	width: 100%;
 }
 
+/* contatiner3 if for the CV part of the second page, the information about the CV is mostly taken from the Links provided in the footer part of the webpage */
 .container3{
+	overflow: auto;
 	float: left;
 	width: 35%;
+	max-width: 100%;
 	height: 900px;
 	margin-left: 2%;
-	background: rgba(148, 117, 117, 0.815);
+	background: rgb(117, 99, 99);
 	padding: 20px;
 }
 
+/* lists in the container 3 style Begin */
+.container3 ul{
+	margin:0;
+	padding:0;
+	list-style: square;
+	line-height: 25px;
+	list-style-position: inside;
+	overflow: auto;
+}
+/* lists in the container 3 style End */
+
+
+
+/* container4 is for the backround of the Google static map
+https://maps.googleapis.com/maps/api/staticmap?center=51.53205190313476%2C-0.17733297435401404&zoom=19&size=400x400&scale=2&maptype=hybrid
+&style=feature%3Awater%7Ccolor%3A0x4B5055%7Cvisibility%3Asimplified&style=feature%3Aroad%7Cweight%3A1%7Ccolor%3A0xE56220%7Cvisibility%3Asimplified
+&style=feature%3Alandscape%7Ccolor%3A0xE9E8E8%7Cvisibility%3Asimplified
+&key=AIzaSyD1Tk0KkDWUvFEaVfc79DU9C4dk5x-CjwI  */
 .container4{
+	overflow: scroll;
 	float: right;
 	width: 60%;
+	max-width: 100%;
 	height: 900px;
 	margin-right: 2%;
 	background: rgb(63, 68, 65);
 	padding: 50px;
 }
 
+/* This image is the Google Static map. */
+img {
+	overflow: auto;
+	border-radius: 4px;
+	max-width: 100%;
+	width: 100%;
+}
 
-/* This creates a Table for the CV page to show */
+/* table Begin */
 table{
 	font-family: 'Didot';
 	width: 100%;
@@ -128,43 +186,55 @@ td {
 	color:rgb(255, 255, 255);
 	background-color: rgb(99, 98, 98);
 }
+/* Table End */
 
 
+
+/* h1 style begin */
 h1 {
 	font-size: 100px;
 	color: white;
-	text-align: center;	
 	font-family: 'Didot';
 	letter-spacing: 40px;
 	margin-top: 30px;
-	margin-bottom: 90px;
 	margin-left: 50px;
 	margin-right: 50px;
+	font-weight: 400;
+	margin-block-end: auto;
+	text-align: center;
 }
+/* h1 style End */
 
+/* h2 style begin */
 h2 {
 	font-size: 70px;
 	color:rgb(255, 255, 255);
 	letter-spacing: 5px;
-	text-align: left;
-	font-family: 'Didot', serif;
-	text-align: center;
+	font-family: 'Didot';
 	margin-top: 30px;
 	margin-bottom: 30px;
+	text-align: center;
+	display: block;
+	font-weight: 400;
 }
+/* h2 style End */
 
+
+/* h3 style begin */
 h3 {
 	font-size: 25px;
 	color:rgb(0, 0, 0);
 	letter-spacing: 5px;
-	text-align: center;
 	font-family: 'Didot';
-	margin-left: 100px;
-	margin-right:100px;
 	margin-top: 30px;
 	margin-bottom: 30px;
+	margin-inline-start: 0px;
+    margin-inline-end: 0px;
+	font-weight:700;
 }
+/* h3 style End */
 
+/* paragraph style begin */
 p {
 	font-size: 16px;
 	color: rgb(255, 255, 255);
@@ -172,50 +242,68 @@ p {
 	text-align: center;
 	line-height: 20px;
 }
+/* paragraph style End */
 
-.container3 ul{
-	margin:0;
-	padding:0;
-	list-style: square;
-	line-height: 25px;
-	list-style-position: inside;
+/* Citation is a container for the footer. */
+.citation {
+	overflow: auto;
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px 0;
+	max-width: 100%;
+	text-align: center;
+	padding-bottom: 45px;
+	margin-bottom: 45px;
 }
 
+
+/* Footer begin */
 footer{
+	position: inherit;
+	background-color: rgb(99, 98, 98);
 	font-weight:bold;
 	letter-spacing: 5px;
-	font-family: 'Didot';
-	text-align: center;
-	text-decoration: none;
+	padding-left: 10px;
+	padding-right: px;
+	margin-top: 50%;
+	margin-bottom: 10px;
+	padding-bottom: 45px;
+	margin-bottom: 45px;
+	padding-top: 35px;
 }
 
-footer::after {
+footer::after{
 	content: '' ;
 	display:table;
 	clear: both;
 }
 
-
-footer ul {
-	margin:0;
-	padding:0;
-	list-style: none;
-}
-
-footer li {
-	display: inline-block;
-	padding-bottom: 5px;
-	margin-left: 100px;
-	margin-right: 100px;
-}
-
-footer a {
+/* footer links begin*/
+footer a{
 	color: rgb(255, 255, 255);
 	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 16px;
+	text-transform: upperc;
+	font-size: 17px;
+	text-decoration:underline;
+	padding-bottom: 10px;
 }
 
 footer a:hover {
 	color:rgb(221, 86, 86);
 }
+/* footer links end*/
+
+footer ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+	display: contents;
+}
+
+footer li {
+	display:block;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding-top: 15px;
+}
+/* Footer End */
